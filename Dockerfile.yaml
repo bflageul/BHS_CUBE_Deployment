@@ -1,3 +1,4 @@
+#FROM docker.io/composer:2.0.8 AS composer
 FROM docker.io/composer:latest AS composer
 FROM docker.io/php:7.4-apache
 
@@ -7,8 +8,8 @@ COPY . /usr/src/app/
 # Make things easier if you shell in
 WORKDIR /usr/src/app
 
-# Our PHP will be running on port 8000
-EXPOSE 8000
+# Our Apache will be running on port 80
+EXPOSE 80
 
 # Install the PDO MySQL extension so we can database
 RUN docker-php-ext-install pdo_mysql
@@ -21,8 +22,9 @@ RUN apt update && apt install -y nodejs npm git
 
 # Build the app
 RUN composer install
+RUN npm install -g npm
 RUN npm install
-RUN npx node-sass style -o public/style
+RUN npx node-sass style -o public/style --verbose
 
 # Copy apache conf
 COPY VideGrenierEnLigne.ApacheVirtualHost.conf /etc/apache2/sites-available/VideGrenierEnLigne.conf

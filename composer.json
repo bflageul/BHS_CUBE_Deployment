@@ -2,9 +2,7 @@
     "require": {
         "twig/twig": "~3.0",
         "ext-pdo": "*",
-        "ext-json": "*",
-        "symfony/requirements-checker": "^2.0",
-        "symfony/apache-pack": "^1.0"
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {

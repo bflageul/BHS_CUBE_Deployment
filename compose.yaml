@@ -14,4 +14,4 @@ services:
     image: vide-grenier-en-ligne-master_php_1
     restart: always
     ports:
-      - 8000:8000
+      - 80:8000

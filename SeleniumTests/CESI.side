@@ -1,0 +1,168 @@
+{
+  "id": "741d160a-46e3-4883-9fb9-c10f0f9460d1",
+  "version": "2.0",
+  "name": "CESI",
+  "url": "http://localhost",
+  "tests": [{
+    "id": "b026d154-afab-4149-b5bd-1ff8359689a3",
+    "name": "Connexion de Samuel",
+    "commands": [{
+      "id": "0260a6ee-a293-4264-8ec0-9fe0dd51c367",
+      "comment": "",
+      "command": "open",
+      "target": "/public/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b1cb61a-37f8-4bb2-9dc3-21be0f02a257",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1127x694",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9ca5f56-6527-448d-955b-04c3f9de3540",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Connexion",
+      "targets": [
+        ["linkText=Connexion", "linkText"],
+        ["css=.loginsignup > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Connexion')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/public/login')]", "xpath:href"],
+        ["xpath=//div[5]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Connexion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0dbb124f-3954-431d-9b06-e1d122733f6a",
+      "comment": "",
+      "command": "click",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=email", "name"],
+        ["css=#exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c171b8d-e0f3-4307-9cf5-0118095be692",
+      "comment": "",
+      "command": "type",
+      "target": "id=exampleInputEmail1",
+      "targets": [
+        ["id=exampleInputEmail1", "id"],
+        ["name=email", "name"],
+        ["css=#exampleInputEmail1", "css:finder"],
+        ["xpath=//input[@id='exampleInputEmail1']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "samuel@cesi.fr"
+    }, {
+      "id": "e9651d15-abfe-4559-9538-558a3a74a047",
+      "comment": "",
+      "command": "type",
+      "target": "id=exampleInputPassword1",
+      "targets": [
+        ["id=exampleInputPassword1", "id"],
+        ["name=password", "name"],
+        ["css=#exampleInputPassword1", "css:finder"],
+        ["xpath=//input[@id='exampleInputPassword1']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "motdepasse"
+    }, {
+      "id": "9f07f4f2-5c89-4e9a-9857-ce679e221f6d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.checkbox:nth-child(1)",
+      "targets": [
+        ["css=.checkbox:nth-child(1)", "css:finder"],
+        ["xpath=//label/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a0a4fd7-6640-4371-a18e-63f67e5bf182",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=.btn-cv1", "css:finder"],
+        ["xpath=//button[@name='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Connexion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f35c5ab-6cce-40be-84cc-f1294f091cf1",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Bienvenue Samuel",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "adb4827c-a60f-4d7d-91a1-3f506239a40c",
+    "name": "Formulaire de contact",
+    "commands": [{
+      "id": "65c8dfd3-cdc2-4f36-aa11-957c0b71f7da",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.cesi.fr/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60fbe1c5-c61e-4606-94a7-34b673863a5d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1127x694",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e75dfc6-a121-46a0-876a-84ac0300e614",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) > .\\_dark > span",
+      "targets": [
+        ["css=li:nth-child(2) > .\\_dark > span", "css:finder"],
+        ["xpath=//ul[@id='menu-outils']/li[2]/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "809eb649-6c8b-4461-8d58-8f0c441832e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(3) > .btn > span",
+      "targets": [
+        ["css=div:nth-child(3) > .btn > span", "css:finder"],
+        ["xpath=//div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52a3abf9-fa2d-46f0-8e26-d0eed5b5387a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Votre message')]", "xpath:innerText"]
+      ],
+      "value": "Votre message"
+    }]
+  }],
+  "suites": [{
+    "id": "94a85799-1c82-464d-893b-f3efd58e2f93",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b026d154-afab-4149-b5bd-1ff8359689a3"]
+  }],
+  "urls": ["http://localhost/"],
+  "plugins": []
+}

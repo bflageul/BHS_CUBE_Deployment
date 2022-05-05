@@ -1,5 +1,6 @@
 /src/vendor/
 .idea/
+.vs/
 *.lock
 package-lock.json
 node_modules/

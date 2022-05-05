@@ -1,0 +1,53 @@
+version: '3.1'
+services:
+  apache:
+    build:
+      context: .
+      # PHP 8.1
+      dockerfile: build/apache/php-8.1/Dockerfile
+    container_name: vide_grenier_web
+    ports:
+      - '80:80'
+    volumes:
+      - './src:/var/www/html'
+      - './vhosts:/etc/apache2/sites-enabled'
+      - './var:/var/log'
+      - '~/.composer/cache:/var/www/.composer/cache'
+    depends_on:
+      - db
+    links:
+      - db
+    networks:
+      - -vide_grenier
+
+  db:
+    image: 'mariadb:10.7'
+    container_name: vide_grenier_db
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MARIADB_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=videgrenierenligne
+      - MARIADB_DATABASE=videgrenierenligne
+      - MYSQL_USER=webapplication
+      - MARIADB_USER=webapplication
+      - MYSQL_PASSWORD=653rag9T
+      - MARIADB_PASSWORD=653rag9T
+    volumes:
+      - './dbdata:/var/lib/mysql'
+    networks:
+      - -vide_grenier
+
+  adminer:
+    image: adminer
+    container_name: vide_grenier_adminer
+    restart: always
+    ports:
+      - '8080:8080'
+    networks:
+      - -vide_grenier
+
+networks:
+  -vide_grenier:
+    driver: bridge

@@ -1,4 +1,8 @@
-vendor/
+/src/vendor/
 .idea/
 *.lock
 package-lock.json
+node_modules/
+
+dbdata/*
+var/*

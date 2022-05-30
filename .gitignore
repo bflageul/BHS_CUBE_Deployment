@@ -7,3 +7,4 @@ node_modules/
 
 dbdata/*
 var/*
+src/public/storage/

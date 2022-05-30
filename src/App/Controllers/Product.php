@@ -32,12 +32,12 @@ class Product extends \Core\Controller
                 /*
                 * Condition désactivé car tous les champs sont requis lors du POST d’une annonce
                 * Pour poster une annonce sans photo, enlever le commentaire sur la condition suivante
-                */ 
+                */
 
-                //if(!isset($_FILES['picture']['error'])) {                
+                //if(!isset($_FILES['picture']['error'])) {
                     $pictureName = Upload::uploadFile($_FILES['picture'], $id);
 
-                    Articles::attachPicture($id, $pictureName);                
+                    Articles::attachPicture($id, $pictureName);
                 // }
 
                 header('Location: /product/' . $id);

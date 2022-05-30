@@ -29,9 +29,16 @@ class Product extends \Core\Controller
                 $f['user_id'] = $_SESSION['user']['id'];
                 $id = Articles::save($f);
 
-                $pictureName = Upload::uploadFile($_FILES['picture'], $id);
+                /*
+                * Condition désactivé car tous les champs sont requis lors du POST d’une annonce
+                * Pour poster une annonce sans photo, enlever le commentaire sur la condition suivante
+                */ 
 
-                Articles::attachPicture($id, $pictureName);
+                //if(!isset($_FILES['picture']['error'])) {                
+                    $pictureName = Upload::uploadFile($_FILES['picture'], $id);
+
+                    Articles::attachPicture($id, $pictureName);                
+                // }
 
                 header('Location: /product/' . $id);
             } catch (\Exception $e){

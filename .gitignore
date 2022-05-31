@@ -8,3 +8,6 @@ node_modules/
 dbdata/*
 var/*
 src/public/storage/
+
+.docker/config/php.ini
+src/App/Config.php

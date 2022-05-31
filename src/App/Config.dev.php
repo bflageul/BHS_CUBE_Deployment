@@ -32,11 +32,11 @@ class Config
      * Database password
      * @var string
      */
-    const DB_PASSWORD = 'CHANGEME';
+    const DB_PASSWORD = '653rag9T';
 
     /**
      * Show or hide error messages on screen
      * @var boolean
      */
-    const SHOW_ERRORS = false;
+    const SHOW_ERRORS = true;
 }

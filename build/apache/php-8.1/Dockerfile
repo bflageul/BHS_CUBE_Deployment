@@ -67,7 +67,6 @@ RUN docker-php-ext-enable xdebug
 # Configuring system
 ADD /.docker/config/php.ini /usr/local/etc/php/php.ini
 ADD /.docker/config/custom-xdebug.ini /usr/local/etc/php/conf.d/custom-xdebug.ini
-COPY /.docker/users/* /var/www/
 RUN chmod +x /usr/local/bin/*
 
 # Permissions / Shell par défaut / Activation de modules apache

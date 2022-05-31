@@ -1,8 +1,10 @@
 /src/vendor/
 .idea/
+.vs/
 *.lock
 package-lock.json
 node_modules/
 
 dbdata/*
 var/*
+src/public/storage/

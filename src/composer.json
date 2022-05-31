@@ -1,4 +1,7 @@
 {
+	"name": "cesi/deployment",
+	"description": "Site web de brocante en ligne",
+	"license": "proprietary",
     "require": {
 		"twig/twig": "^3.0",
 		"ext-pdo": "*",

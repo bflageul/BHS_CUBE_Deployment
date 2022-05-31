@@ -21,7 +21,7 @@ services:
       - -vide_grenier
 
   db:
-    image: 'mariadb:10.7'
+    image: 'docker.io/mariadb:10.7'
     container_name: vide_grenier_db
     ports:
       - '3306:3306'
@@ -40,7 +40,7 @@ services:
       - -vide_grenier
 
   adminer:
-    image: adminer
+    image: 'docker.io/adminer'
     container_name: vide_grenier_adminer
     restart: always
     ports:

@@ -1,4 +1,4 @@
-FROM php:8.1-apache
+FROM docker.io/php:8.1-apache
 
 ENV XDEBUG_PORT 9003
 

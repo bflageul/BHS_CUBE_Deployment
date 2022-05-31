@@ -1,9 +1,12 @@
 {
-    "require": {
-        "twig/twig": "^3.0",
-      "ext-pdo": "*",
-      "ext-json": "*"
-    },
+  "require": {
+    "twig/twig": "^3.0",
+    "ext-pdo": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  },
     "autoload": {
         "psr-4": {
             "Core\\": "Core/",
